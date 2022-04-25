@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: speedtest
+  namespace: your_namespace
+spec:
+  schedule: "0 5 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: speedtest
+            image: dewhurstwill/speedtest:v1 # Replace with the registry URL and tag for your container image
+            imagePullPolicy: IfNotPresent
+            env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: speedtest
+                  key: MONGODB_URI
+                  optional: false
+          restartPolicy: OnFailure
