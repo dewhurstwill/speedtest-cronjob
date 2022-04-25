@@ -3,7 +3,7 @@
 
 A cronjob service that consumes [speedtest-service](https://github.com/dewhurstwill/speedtest-service) package
 
-## Prequesties
+## Prerequisites
 ---
 
 Ensure that speedtest is installed. [Available here.](https://www.speedtest.net/apps/cli)
