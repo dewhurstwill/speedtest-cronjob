@@ -1,0 +1,16 @@
+{
+  "name": "speedtest-cronjob",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dewhurstwill/speedtest-cronjob.git",
+  "author": "Will Dewhurst <will@wdew.uk>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "joi": "^17.6.0",
+    "monk": "^7.3.4",
+    "speedtest-service": "^1.0.4"
+  }
+}
